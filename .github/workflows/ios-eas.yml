@@ -21,12 +21,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
+          cache: 'npm'
 
       - name: Install dependencies
         run: npm ci
 
-      # Logs into Expo and installs latest expo & eas CLIs
+      # Login & install Expo/EAS CLIs
       - name: Setup Expo & EAS
         uses: expo/expo-github-action@v8
         with:
@@ -34,23 +34,23 @@ jobs:
           expo-version: latest
           eas-version: latest
 
-      # Guard: ensure eas is really available even if PATH changes
+      # Guard: ensure EAS CLI is available
       - name: Ensure EAS CLI present
         run: |
           if ! command -v eas >/dev/null 2>&1; then
             npm i -g eas-cli
           fi
-          echo "eas version: $(eas --version)"
-          echo "expo version: $(expo --version)"
+          echo "eas: $(eas --version)"
+          echo "expo: $(expo --version)"
 
-      # Optional: fail early if eas.json is missing
+      # Optional: fail early if eas.json missing
       - name: Verify eas.json present
         run: test -f eas.json || (echo "::error::eas.json is missing in the repo"; exit 1)
 
-      # Build on Expo cloud; auto-increments iOS buildNumber
+      # Build on Expo cloud (no --auto-increment flag)
       - name: EAS build (iOS • production)
-        run: eas build --platform ios --profile production --non-interactive --auto-increment --wait
+        run: eas build --platform ios --profile production --non-interactive --wait
 
-      # Submit most recent build to TestFlight
+      # Submit the most recent iOS build to TestFlight
       - name: Submit to TestFlight
         run: eas submit -p ios --latest --non-interactive
