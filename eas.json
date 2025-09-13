@@ -1,12 +1,16 @@
 {
   "cli": { "version": ">= 13.0.0", "appVersionSource": "remote" },
   "build": {
-    "development": { "developmentClient": true, "distribution": "internal" },
-    "preview": { "distribution": "internal" },
     "production": {
       "ios": { "image": "latest", "resourceClass": "m-medium", "autoIncrement": true },
       "android": { "image": "latest" }
     }
   },
-  "submit": { "production": { "ios": {} } }
+  "submit": {
+    "production": {
+      "ios": {
+        "ascAppId": "6752509375"
+      }
+    }
+  }
 }
