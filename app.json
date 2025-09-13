@@ -18,7 +18,6 @@
       "infoPlist": {
         "NSUserNotificationUsageDescription": "We use notifications to remind you about due payments.",
         "NSPhotoLibraryUsageDescription": "Allow access to your photos to attach bill images."
-
       }
     },
     "android": {
@@ -47,8 +46,9 @@
     },
     "extra": {
       "eas": {
-        "projectId": "00000000-0000-4000-8000-000000000000"
+        "projectId": "a2d809e9-7474-44af-afd2-cdf0758f94aa"
       }
-    }
+    },
+    "owner": "krishnamamidala"
   }
 }
