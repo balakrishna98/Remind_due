@@ -1,0 +1,22 @@
+# Node / React Native
+node_modules/
+*.log
+.expo/
+.expo-shared/
+
+# Android
+android/.gradle/
+android/.idea/
+android/build/
+*.keystore
+*.jks
+local.properties
+
+# iOS (if present)
+ios/Pods/
+ios/build/
+DerivedData/
+
+# IDE
+.idea/
+.vscode/

@@ -1,0 +1,53 @@
+{
+  "expo": {
+    "name": "Remind Due",
+    "slug": "remind-due",
+    "scheme": "reminddue",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/modernB-icon-1024.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#0f1737"
+    },
+    "ios": {
+      "bundleIdentifier": "com.balu.reminddue",
+      "supportsTablet": false,
+      "infoPlist": {
+        "NSUserNotificationUsageDescription": "We use notifications to remind you about due payments.",
+        "NSPhotoLibraryUsageDescription": "Allow access to your photos to attach bill images."
+
+      }
+    },
+    "android": {
+      "package": "com.balu.reminddue",
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/modernB-adaptive-foreground-432.png",
+        "backgroundColor": "#0f1737"
+      },
+      "permissions": [
+        "RECEIVE_BOOT_COMPLETED",
+        "SCHEDULE_EXACT_ALARM",
+        "POST_NOTIFICATIONS"
+      ]
+    },
+    "plugins": [
+      "expo-notifications",
+      "expo-sqlite",
+      "expo-asset",
+      "expo-localization"
+    ],
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "runtimeVersion": {
+      "policy": "sdkVersion"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "00000000-0000-4000-8000-000000000000"
+      }
+    }
+  }
+}

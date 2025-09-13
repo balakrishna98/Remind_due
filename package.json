@@ -1,0 +1,37 @@
+{
+  "name": "paymentsreminder",
+  "version": "1.0.0",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "start": "expo start -c",
+    "android": "expo run:android",
+    "ios": "expo run:ios",
+    "web": "expo start --web"
+  },
+  "dependencies": {
+    "@react-native-community/datetimepicker": "8.4.4",
+    "@react-native-picker/picker": "2.11.1",
+    "@react-navigation/native": "^7.1.17",
+    "@react-navigation/native-stack": "^7.3.26",
+    "expo": "^54.0.3",
+    "expo-asset": "~12.0.8",
+    "expo-device": "~8.0.7",
+    "expo-document-picker": "^14.0.7",
+    "expo-image-picker": "^17.0.8",
+    "expo-linear-gradient": "~15.0.7",
+    "expo-localization": "~17.0.7",
+    "expo-notifications": "^0.32.11",
+    "expo-sqlite": "~16.0.8",
+    "expo-status-bar": "~3.0.8",
+    "expo-task-manager": "~14.0.7",
+    "react": "19.1.0",
+    "react-native": "0.81.4",
+    "react-native-calendars": "^1.1313.0",
+    "react-native-safe-area-context": "~5.6.0",
+    "react-native-screens": "~4.16.0"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.20.0"
+  }
+}
