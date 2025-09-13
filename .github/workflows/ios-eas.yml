@@ -1,0 +1,24 @@
+name: iOS • EAS Build & Submit
+on:
+  workflow_dispatch:
+  push:
+    tags:
+      - 'ios-v*'   # e.g. ios-v1.0.0+1
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm ci
+      - name: Expo login
+        uses: expo/expo-github-action@v8
+        with:
+          token: ${{ secrets.EXPO_TOKEN }}
+      - name: EAS build (iOS)
+        run: npx eas build --platform ios --profile production --non-interactive --wait
+      - name: EAS submit to TestFlight
+        run: npx eas submit -p ios --latest --non-interactive
