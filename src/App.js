@@ -672,6 +672,15 @@ function MainApp() {
         </ScrollView>
       </KeyboardAvoidingView>
 
+      {/* Footer */}
+      <Text
+        style={[s.copyright, { color: T.muted }]}
+        accessibilityLabel={`Copyright ${new Date().getFullYear()} Balakrishna Mamidala`}
+      >
+        © {new Date().getFullYear()} Balakrishna Mamidala
+      </Text>
+
+
       {/* Calendar Modal */}
       <Modal
         transparent
@@ -887,6 +896,13 @@ function makeStyles({ font, pad }) {
     sheetTitle: { fontSize: font(16), fontWeight:'800', marginBottom: pad(10), color: T.text },
     sheetActions: { flexDirection:'row', justifyContent:'flex-end', gap: pad(10), marginTop: pad(12) },
     sheetBtn: { paddingVertical: pad(10), paddingHorizontal: pad(14), borderRadius: pad(12) },
-    sheetBtnText: { fontWeight:'800', fontSize: font(14) },
+    sheetBtnText: { fontWeight:'800', fontSize: font(14) },copyright: {
+                                                             fontSize: font(11),
+                                                             textAlign: 'center',
+                                                             marginTop: pad(6),
+                                                             marginBottom: pad(10),
+                                                             color: T.muted,
+                                                           },
+
   });
 }
