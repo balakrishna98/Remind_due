@@ -13,6 +13,7 @@
     },
     "ios": {
       "bundleIdentifier": "com.balu.reminddue",
+      "buildNumber": "1",
       "supportsTablet": false,
       "infoPlist": {
         "NSUserNotificationUsageDescription": "We use notifications to remind you about due payments.",
