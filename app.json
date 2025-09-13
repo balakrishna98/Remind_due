@@ -17,7 +17,9 @@
       "supportsTablet": false,
       "infoPlist": {
         "NSUserNotificationUsageDescription": "We use notifications to remind you about due payments.",
-        "NSPhotoLibraryUsageDescription": "Allow access to your photos to attach bill images."
+        "NSPhotoLibraryUsageDescription": "Allow access to your photos to attach bill images.",
+        "ITSAppUsesNonExemptEncryption": false
+
       }
     },
     "android": {
